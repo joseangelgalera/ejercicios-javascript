@@ -3,89 +3,91 @@ body {
     text-align: justify;
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 14px;
-    }
-    
-    .header {
-    background-color: #4CAF50; 
+}
+
+.header {
+    background-color: #ecda1d;
     border-radius: 15px 15px 0 0;
     opacity: 0.5;
     text-align: center;
     padding: 5px;
-    color: rgb(255,250,250,0.90);
-    text-shadow: 2px 2px 4px rgb(0,0,0,0.75);
-    }
-    
-    .topnav {
+    color: black;
+}
+
+.topnav {
     overflow: hidden;
     border-radius: 0 0 15px 15px;
-    background-color: rgb(255,165,0,0.5);
-    
+    background-color: black;
+    color: white;
+
     opacity: 0.85;
-    }
-    
-    .topnav a {
+}
+
+.topnav a {
     float: left;
     display: block;
-    color: rgb(255,250,250,0.90);
-    text-shadow: 2px 2px 4px rgb(0,0,0,0.75);
+    color: rgb(255, 250, 250, 0.90);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.75);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    }
-    
-    .topnav a:hover {
-    background-color: rgb(128,128,128,0.25);
-    color: rgb(255,215,0,0.75);
-    }
-    
-    .container {
-       
+}
+
+.topnav a:hover {
+    background-color: rgb(128, 128, 128, 0.25);
+    color: rgb(255, 215, 0, 0.75);
+}
+
+.container {
+
     flex-wrap: wrap;
     gap: 16px;
-    }
-    
-    .card {
+}
+
+.card {
     width: auto;
-    border: 1px solid rgb(211,211,211,0.5);
+    border: 1px solid rgb(211, 211, 211, 0.5);
     box-shadow: 2px 2px 8px 4px #d3d3d3d1;
     border-radius: 15px;
     font-family: sans-serif;
-    }
+}
 
-    .cardTitle {
-        font-size: 24px;
-        padding: 10px 10px 0 10px;
-        }
-        
-        .cardBody {
-        padding: 10px;
-        flex: 1 1 100%;
-        }
-        
-        .cardFooter {
-        background: rgb(70,130,180,0.25);    
-        border-radius: 0 0 15px 15px;
-        padding: 10px;
-        text-align: center;
-        }
-        
-        .cardFooter a {
-        text-decoration: none;
-        color: rgb(0,0,255,0.80);
-        text-shadow: 2px 2px 4px rgb(0,0,0,0.25);
-        }
-        
-        @media screen and (max-width: 600px) {
-        .container {
+.cardTitle {
+    font-size: 24px;
+    padding: 10px 10px 0 10px;
+}
+
+.cardBody {
+    padding: 10px;
+    flex: 1 1 100%;
+}
+
+.cardFooter {
+    background-color: black;
+    opacity: 0.85;
+    border-radius: 0 0 15px 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.cardFooter a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 600px) {
+    .container {
         width: 100%;
-        }
-        }
-        
-        .footer {
-        background-color: rgb(70,130,180,0.5);   opacity: 0.5;
-        text-align: center;
-        padding: 20px;
-        
-        color: rgb(255,250,250,0.90);
-        text-shadow: 2px 2px 4px rgb(0,0,0,0.75);
-        }
+    }
+}
+
+.footer {
+    background-color: black;
+    opacity: 0.85;
+    text-align: center;
+    padding: 20px;
+
+    color: rgb(255, 250, 250, 0.90);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.75);
+}
