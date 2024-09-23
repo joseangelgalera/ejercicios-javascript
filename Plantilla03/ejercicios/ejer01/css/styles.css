@@ -8,10 +8,21 @@ body {
 .header {
     background-color: #ecda1d;
     border-radius: 15px 15px 0 0;
-    opacity: 0.5;
     text-align: center;
-    padding: 5px;
-    color: black;
+    padding: 0; 
+    color: white;
+    position: relative;
+    overflow: hidden; 
+}
+
+.header img {
+    width: 140px;
+    height: 135px;
+    border-radius: 15px 0 0 0; 
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
 }
 
 .topnav {
@@ -87,7 +98,11 @@ body {
     opacity: 0.85;
     text-align: center;
     padding: 20px;
-
     color: rgb(255, 250, 250, 0.90);
     text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.75);
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    left: 0; 
+    right: 0;
 }
