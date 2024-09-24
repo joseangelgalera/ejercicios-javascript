@@ -19,7 +19,7 @@ body {
     width: 140px;
     height: 135px;
     border-radius: 15px 0 0 0; 
-    margin: 0;
+    margin-right: -140px;
     padding: 0;
     display: block;
     float: left;
