@@ -51,8 +51,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
         container.style.display = 'none';
         login.style.display = 'flex';
+        login.style.flexDirection = 'column';
         cerrarsesion.style.display = 'none';
-        login.style.display = 'none';
+    
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+    
+        error.style.display = 'none';
+    
         setTimeout(function() {
             login.style.display = 'flex';
         }, 0);
