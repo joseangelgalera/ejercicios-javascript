@@ -48,7 +48,28 @@
         color: rgb(255, 215, 0, 0.75);
     }
 
+    .topnav button.cerrar-sesion {
+        float: right;
+        display: none;
+        color: rgb(255, 250, 250, 0.90);
+        text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.75);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        background-color: black;
+        border: none;
+    }
+    
+    .topnav button.cerrar-sesion:hover {
+        background-color: rgb(128, 128, 128, 0.25);
+        color: rgb(255, 215, 0, 0.75);
+        cursor: pointer;
+    }
+
     .login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 300px;
         margin: 50px auto;
         padding: 30px;
@@ -59,6 +80,8 @@
     }
     
     .login-form h2 {
+        text-align: center;
+        width: 100%;
         margin-bottom: 20px;
         font-size: 24px;
         text-align: center;

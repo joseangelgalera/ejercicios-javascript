@@ -25,21 +25,23 @@
         <a href="https://es.javascript.info/js">javascript.info</a>
         <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN</a>
         <a href="https://github.com/joseangelgalera/ejercicios-javascript">GitHub</a>
+        <button class="cerrar-sesion" style="display: none;">Cerrar Sesión</button>
     </div>
     <br />
     <!-- MAIN-CONTENT -->
     <div class="login-form">
-        <h2>Login</h2>
+        <h2>Inicio de Sesion</h2>
         <form>
             <div class="form-group">
-                <label for="username">Username:</label>
+                <label for="username">Nombre de usuario:</label>
                 <input type="text" id="username" name="username" required>
             </div>
             <div class="form-group">
-                <label for="password">Password:</label>
+                <label for="password">Contraseña:</label>
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit">Iniciar Sesión</button>
+            <p class="error" style="display: none; color: red;">Nombre de usuario o contraseña incorrectos</p>
         </form>
     </div>
     <div class="container">

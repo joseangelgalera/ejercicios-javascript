@@ -1,11 +1,12 @@
-"use strict";
-
 document.addEventListener('DOMContentLoaded', function() {
     var form = document.querySelector('.login-form form');
     var login = document.querySelector('.login-form');
     var container = document.querySelector('.container');
+    var error = document.querySelector('.error');
+    var cerrarsesion = document.querySelector('.cerrar-sesion');
 
     container.style.display = 'none';
+    cerrarsesion.style.display = 'none';
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -14,48 +15,46 @@ document.addEventListener('DOMContentLoaded', function() {
         var password = document.getElementById('password').value;
 
         if (username === "Jose" && password === "1234") {
-            alert("¡Bienvenido, " + username + "!");
+            document.cookie = "username=" + username;
             login.style.display = 'none';
             container.style.display = 'flex';
+            cerrarsesion.style.display = 'block';
         } else {
-            alert("Nombre de usuario o contraseña incorrectos");
+            error.style.display = 'block';
             document.getElementById('username').value = '';
             document.getElementById('password').value = '';
         }
     });
+
+    var usernameCookie = getCookie("username");
+    if (usernameCookie) {
+        login.style.display = 'none';
+        container.style.display = 'flex';
+        cerrarsesion.style.display = 'block';
+    }
+
+    function getCookie(name) {
+        var cookieArr = document.cookie.split(";");
+
+        for (var i = 0; i < cookieArr.length; i++) {
+            var cookiePair = cookieArr[i].split("=");
+
+            if (name === cookiePair[0].trim()) {
+                return decodeURIComponent(cookiePair[1]);
+            }
+        }
+
+        return null;
+    }
+
+    cerrarsesion.addEventListener('click', function() {
+        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        container.style.display = 'none';
+        login.style.display = 'flex';
+        cerrarsesion.style.display = 'none';
+        login.style.display = 'none';
+        setTimeout(function() {
+            login.style.display = 'flex';
+        }, 0);
+    });
 });
-
-
-
-
-
-
-
-
-
-
-
-// "use strict"
-
-
-// function login() {
-//     var container = document.querySelector('.container');
-
-//     var nombre = prompt("Por favor, ingresa tu nombre de usuario:");
-    
-//     while (nombre !== "Jose") {
-//         alert("Nombre de usuario o contraseña incorrectos");
-//         nombre = prompt("Por favor, ingresa tu nombre:");
-//     }
-    
-//     var contraseña = prompt("Hola " + nombre + "! Por favor, ingresa tu contraseña:");
-        
-//     while (contraseña !== "1234") {
-//         alert("¿Desea intentarlo de nuevo?");
-//         nombre = prompt("Por favor, ingresa tu nombre de usuario:");
-//         contraseña = prompt("Hola " + nombre + "! ingrese su contraseña:");
-//     }
-    
-//     alert("¡Bienvenido, " + nombre + "!");
-//     container.style.display = 'flex';
-// }
