@@ -10,18 +10,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-
+    
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-
-        if (username === "Jose" && password === "1234") {
+        var usernameError = document.querySelector('.username-error');
+        var welcome = document.querySelector('.welcome');
+    
+        var storedUsername = "Jose";
+        var storedPassword = "1234";
+    
+        if (username.length <= 3) {
+            usernameError.style.display = 'block';
+            document.getElementById('password').disabled = true;
+            return;
+        } else {
+            usernameError.style.display = 'none';
+            document.getElementById('password').disabled = false;
+        }
+    
+        if (username === storedUsername && password === storedPassword) {
             document.cookie = "username=" + username;
             login.style.display = 'none';
             container.style.display = 'flex';
-            cerrarsesion.style.display = 'block';
+            cerrarsesion.style.display = 'block';   
+            welcome.textContent = "Bienvenid@, " + username + "!";
+            welcome.style.display = 'block';
         } else {
-            error.style.display = 'block';
-            document.getElementById('username').value = '';
+            alert("Usuario o contraseña incorrectos");
             document.getElementById('password').value = '';
         }
     });
@@ -53,12 +68,13 @@ document.addEventListener('DOMContentLoaded', function() {
         login.style.display = 'flex';
         login.style.flexDirection = 'column';
         cerrarsesion.style.display = 'none';
-    
+
         document.getElementById('username').value = '';
         document.getElementById('password').value = '';
-    
-        error.style.display = 'none';
-    
+
+        var welcome = document.querySelector('.welcome');
+        welcome.style.display = 'none';
+
         setTimeout(function() {
             login.style.display = 'flex';
         }, 0);

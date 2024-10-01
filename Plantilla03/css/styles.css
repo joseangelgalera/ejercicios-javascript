@@ -120,12 +120,11 @@
     button[type="submit"]:hover {
         background-color: #45a049;
     }
-
-    .error {
-        
-        display: none; 
-        color: red;
-
+    .welcome{
+        display: none;
+        text-align: center;
+        font-size: 24px;
+        color: black;
     }
     .container {
 
