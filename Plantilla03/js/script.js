@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var cerrarsesion = document.querySelector('.cerrar-sesion');
 
     container.style.display = 'none';
-    cerrarsesion.style.display = 'none';
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -31,8 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (username === storedUsername && password === storedPassword) {
             document.cookie = "username=" + username;
             login.style.display = 'none';
-            container.style.display = 'flex';
-            cerrarsesion.style.display = 'block';   
+            container.style.display = 'flex';  
             welcome.textContent = "Bienvenid@, " + username + "!";
             welcome.style.display = 'block';
         } else {
@@ -45,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (usernameCookie) {
         login.style.display = 'none';
         container.style.display = 'flex';
-        cerrarsesion.style.display = 'block';
     }
 
     function getCookie(name) {
@@ -67,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
         container.style.display = 'none';
         login.style.display = 'flex';
         login.style.flexDirection = 'column';
-        cerrarsesion.style.display = 'none';
 
         document.getElementById('username').value = '';
         document.getElementById('password').value = '';
