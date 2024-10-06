@@ -1,11 +1,26 @@
+"use strict";
+
 document.addEventListener('DOMContentLoaded', function() {
     var form = document.querySelector('.login-form form');
     var login = document.querySelector('.login-form');
     var container = document.querySelector('.container');
     var error = document.querySelector('.error');
     var cerrarsesion = document.querySelector('.cerrar-sesion');
+    var topnav = document.querySelector('.topnav');
+    var welcome = document.querySelector('.welcome');
+    var header = document.querySelector('.header');
 
-    container.style.display = 'none';
+    function checkLogin() {
+        var username = getCookie("username");
+        if (username) {
+            login.style.display = 'none';
+            container.style.display = 'flex';
+            topnav.style.display = 'block';
+            welcome.textContent = "Bienvenid@, " + username + "!";
+            welcome.style.display = 'block';
+            header.style.borderRadius = '15px 15px 0 0';
+        }
+    }
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -13,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
         var usernameError = document.querySelector('.username-error');
-        var welcome = document.querySelector('.welcome');
     
         var storedUsername = "Jose";
         var storedPassword = "1234";
@@ -28,51 +42,36 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     
         if (username === storedUsername && password === storedPassword) {
-            document.cookie = "username=" + username;
+            setCookie("username", username, 1); 
             login.style.display = 'none';
-            container.style.display = 'flex';  
+            container.style.display = 'flex';
+            topnav.style.display = 'block';
             welcome.textContent = "Bienvenid@, " + username + "!";
             welcome.style.display = 'block';
+            header.style.borderRadius = '15px 15px 0 0'; 
         } else {
             alert("Usuario o contraseña incorrectos");
             document.getElementById('password').value = '';
         }
     });
 
-    var usernameCookie = getCookie("username");
-    if (usernameCookie) {
-        login.style.display = 'none';
-        container.style.display = 'flex';
-    }
-
-    function getCookie(name) {
-        var cookieArr = document.cookie.split(";");
-
-        for (var i = 0; i < cookieArr.length; i++) {
-            var cookiePair = cookieArr[i].split("=");
-
-            if (name === cookiePair[0].trim()) {
-                return decodeURIComponent(cookiePair[1]);
-            }
-        }
-
-        return null;
-    }
-
     cerrarsesion.addEventListener('click', function() {
-        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        eraseCookie("username");
         container.style.display = 'none';
         login.style.display = 'flex';
         login.style.flexDirection = 'column';
+        topnav.style.display = 'none';
 
         document.getElementById('username').value = '';
         document.getElementById('password').value = '';
 
-        var welcome = document.querySelector('.welcome');
         welcome.style.display = 'none';
+        header.style.borderRadius = ''; 
 
         setTimeout(function() {
             login.style.display = 'flex';
         }, 0);
     });
+
+    checkLogin(); 
 });

@@ -7,7 +7,7 @@
 
     .header {
         background-color: #ecda1d;
-        border-radius: 15px 15px 0 0;
+        border-radius: 15px 15px 15px 15px;
         text-align: center;
         padding: 0; 
         color: white;
@@ -25,11 +25,11 @@
         float: left;
     }
     .topnav {
+        display: none; 
         overflow: hidden;
         border-radius: 0 0 15px 15px;
         background-color: black;
         color: white;
-
         opacity: 0.85;
     }
 
@@ -47,6 +47,7 @@
         background-color: rgb(128, 128, 128, 0.25);
         color: rgb(255, 215, 0, 0.75);
     }
+    
 
     .topnav button.cerrar-sesion {
         float: right;
