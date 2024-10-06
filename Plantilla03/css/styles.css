@@ -26,7 +26,6 @@
     }
     .topnav {
         display: none; 
-        overflow: hidden;
         border-radius: 0 0 15px 15px;
         background-color: black;
         color: white;
@@ -47,11 +46,46 @@
         background-color: rgb(128, 128, 128, 0.25);
         color: rgb(255, 215, 0, 0.75);
     }
+
+    .topnav .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .topnav .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black; 
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        border-radius: 0 0 15px 15px;
+        z-index: 1000; 
+        top: 100%; 
+        left: 0; 
+        white-space: nowrap; 
+    }
+    
+    .topnav .dropdown-content a {
+        color: white; 
+        padding: 12px 16px;
+        text-decoration: none;
+        display: inline-block; 
+    }
+    
+    .topnav .dropdown-content a:hover {
+        border-radius: 0 0 15px 15px;
+        background-color: rgb(128, 128, 128, 0.25);
+        color: rgb(255, 215, 0, 0.75); 
+    }
+    
+    .topnav .dropdown:hover .dropdown-content {
+        display: flex;
+    }
     
 
     .topnav button.cerrar-sesion {
         float: right;
         color: rgb(255, 250, 250, 0.90);
+        border-radius: 0 0 15px 0;
         text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.75);
         text-align: center;
         padding: 14px 16px;
@@ -61,6 +95,7 @@
     }
     
     .topnav button.cerrar-sesion:hover {
+        border-radius: 0 0 15px 0;
         background-color: rgb(128, 128, 128, 0.25);
         color: rgb(255, 215, 0, 0.75);
         cursor: pointer;
