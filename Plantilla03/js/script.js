@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var login = document.querySelector('.login-form');
     var container = document.querySelector('.container');
     var error = document.querySelector('.error');
-    var cerrarsesion = document.querySelector('.cerrar-sesion');
+    var cerrarSesion = document.querySelector('.cerrar-sesion');
     var topnav = document.querySelector('.topnav');
     var welcome = document.querySelector('.welcome');
     var header = document.querySelector('.header');
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    cerrarsesion.addEventListener('click', function() {
+    cerrarSesion.addEventListener('click', function() {
         eraseCookie("username");
         container.style.display = 'none';
         login.style.display = 'flex';
