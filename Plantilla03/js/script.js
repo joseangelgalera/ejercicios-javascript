@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var header = document.querySelector('.header');
 
     function checkLogin() {
-        var username = getCookie("username");
+        var username = sessionStorage.getItem("username");
         if (username) {
             login.style.display = 'none';
             container.style.display = 'flex';
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     
         if (username === storedUsername && password === storedPassword) {
-            setCookie("username", username, 1); 
+            sessionStorage.setItem("username", username); 
             login.style.display = 'none';
             container.style.display = 'flex';
             topnav.style.display = 'block';
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     cerrarSesion.addEventListener('click', function() {
-        eraseCookie("username");
+        sessionStorage.removeItem("username");
         container.style.display = 'none';
         login.style.display = 'flex';
         login.style.flexDirection = 'column';
