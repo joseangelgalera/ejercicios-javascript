@@ -11,8 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var header = document.querySelector('.header');
 
     function checkLogin() {
+        var isLoggedIn = sessionStorage.getItem("LoggedIn");
         var username = sessionStorage.getItem("username");
-        if (username) {
+        if (isLoggedIn === "true" && username) {
             login.style.display = 'none';
             container.style.display = 'flex';
             topnav.style.display = 'block';
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         if (username === storedUsername && password === storedPassword) {
             sessionStorage.setItem("username", username); 
+            sessionStorage.setItem("LoggedIn", "true");
             login.style.display = 'none';
             container.style.display = 'flex';
             topnav.style.display = 'block';
@@ -57,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     cerrarSesion.addEventListener('click', function() {
         sessionStorage.removeItem("username");
+        sessionStorage.setItem("LoggedIn", "false");
         container.style.display = 'none';
         login.style.display = 'flex';
         login.style.flexDirection = 'column';
