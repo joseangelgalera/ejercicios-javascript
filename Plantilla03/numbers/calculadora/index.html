@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./css/calculadora.css" rel="stylesheet" type="text/css" />
+    <script defer type="text/javascript" src="./js/operacionesBasicas.js"></script>
+    <script defer type="text/javascript" src="./js/operacionesCientificas.js"></script>
+    <script defer type="text/javascript" src="./js/tratamiento.js"></script>
+    <script defer type="text/javascript" src="./js/resolver.js"></script>
+    <script defer type="text/javascript" src="./js/script.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <img src="../../img/foto_perfil.jpg" alt="">
+        <h3>Ejemplos – FUNDAMENTOS DE JS
+            (ES6)</h3>
+        <h4>Desarrollo WEB en entorno cliente</h4>
+        <h5>Plantilla03a</h5>
+    </div>
+    <!-- MENU -->
+    <div class="topnav">
+
+        <a href="https://www.w3schools.com/js/default.asp">w3schools</a>
+        <a href="https://es.javascript.info/js">javascript.info</a>
+        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN</a>
+        <a href="https://github.com/joseangelgalera/ejercicios-javascript">GitHub</a>
+        <div class="dropdown">
+            <a href="#">Number</a>
+            <div class="dropdown-content">
+                <a href="#">Calculadora</a>
+                <a href="../../numbers/conversor/index.html">Conversor</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">String</a>
+            <div class="dropdown-content">
+                <a href="../../strings/operaciones-con-cadenas/index.html">Operaciones con cadenas</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Arrays</a>
+            <div class="dropdown-content">
+                <a href="../../arrays/operaciones-con-matrices/index.html">Operaciones con matrices</a>
+            </div>
+        </div>
+        <button class="cerrar-sesion">Cerrar Sesión</button>
+        
+        
+    </div>
+    <br />
+    <!-- MAIN-CONTENT -->
+    <div class="container">
+        <div class="card">
+            <div class="cardTitle">Calculadora</div>
+                <div class="cardBody">
+                    <div id="contenedor">
+                        <div id="calculadora">
+                            <select name="" id="selector">
+                                <option value="basica">Básica</option>
+                                <option value="cientifica">Científica</option>
+                            </select>
+                            <br/>
+                            <div id="pantalla"> 
+                                <h1 id="salida"></h1>
+                            </div>
+                            <br/>
+                            <button class="operadoresCi" value="log">log</button>
+                            <button id="memoria">M</button>
+                            <button id="borrar"><=</button>
+                            <button id="limpiarC">C</button>
+                            <button id="limpiarT">CE</button>
+                            <button class="operadoresCi" value="Rnd">Rnd</button>
+                            <br/>
+                            <button class="operadoresCi" value="ln">ln</button>
+                            <button class="numeros" value="7">7</button>
+                            <button class="numeros" value="8">8</button>
+                            <button class="numeros" value="9">9</button>
+                            <button class="operadores" value="/">/</button>
+                            <button class="operadoresCi" value="2^a">2^a</button>
+                            <br/>
+                            <button class="operadoresCi" value="e">e</button>
+                            <button class="numeros" value="4">4</button>
+                            <button class="numeros" value="5">5</button>
+                            <button class="numeros" value="6">6</button>
+                            <button class="operadores" value="*">*</button>
+                            <button class="operadoresCi" value="a^b">a^b</button>
+                            <br/>
+                            <button class="operadoresCi" value="π">π</button>
+                            <button class="numeros" value="1">1</button>
+                            <button class="numeros" value="2">2</button>
+                            <button class="numeros" value="3">3</button>
+                            <button class="operadores" value="-">-</button>
+                            <button class="operadoresCi" value="cos">cos</button>
+                            <br/>
+                            <button class="operadoresCi" value="!">!</button>
+                            <button class="numeros" value="-">+/-</button>
+                            <button class="numeros" value="0">0</button>
+                            <button class="numeros" value=".">.</button>
+                            <button class="operadores" value="+">+</button>
+                            <button class="operadoresCi" value="sen">sen</button>
+                            <br/>
+                            <button class="operadoresCi" value="mod">mod</button>
+                            <button class="operadores" value="1/x">1/x</button>
+                            <button class="operadores" value="√">√</button>
+                            <button class="operadores" value="%">%</button>
+                            <button id="resolver">=</button>
+                            <button class="operadoresCi" value="tan">tan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cardFooter"><a href="../../index.html">&gt;&gt; Volver</a></div>
+
+    </div>
+    <br />
+    <!-- FOOT -->
+    <div class="footer">
+        © José Ángel galera García
+    </div>
+</body>
+
+</html>

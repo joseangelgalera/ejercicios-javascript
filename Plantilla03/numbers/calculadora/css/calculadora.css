@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'orbitron';
+    src: url('../fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
+}
+
+#contenedor{
+    width: 332px;
+    height: 360px;
+    background-color: #000000;
+    border: double 3px #888;
+    left: 34%;
+    top: 34%;
+    position: absolute;
+    padding: 50px;
+
+}
+
+#calculadora{
+    position: relative;
+    top: -25px;
+}
+
+#calculadora h1{
+    color: black;
+}
+
+
+#selector{
+    font-family: orbitron;
+    position: relative;
+    top: 17px;
+    left: 125px;
+    border-radius: 5px;
+}
+
+#resolver{
+    font-family: orbitron;
+    width: 50px;
+    height: 50px;
+    background-color: #c0bbb5;
+    margin: 1px;
+    border: solid 1px #888;
+    border-radius: 5px;
+}
+
+#resolver:active{
+    background-color:#F0D44A;
+}
+
+#memoria{
+    font-family: orbitron;
+    width: 50px;
+    height: 50px;
+    background-color: #c0bbb5;
+    margin: 1px;
+    border: solid 1px #888;
+    border-radius: 5px;
+}
+
+#memoria:active{
+    background-color:#F0D44A;
+}
+
+#borrar{
+    font-family: orbitron;
+    width: 50px;
+    height: 50px;
+    background-color: #c0bbb5;
+    margin: 1px;
+    border: solid 1px #888;
+    border-radius: 5px;
+}
+
+#borrar:active{
+    background-color:#F0D44A;
+}
+
+#limpiar{
+    font-family: orbitron;
+    width: 50px;
+    height: 50px;
+    background-color: #c0bbb5;
+    margin: 1px;
+    border: solid 1px #888;
+    border-radius: 5px;
+}
+
+#limpiar:active{
+    background-color:#F0D44A;
+}
+
+#limpiarT{
+    font-family: orbitron;
+    width: 50px;
+    height: 50px;
+    background-color: #c0bbb5;
+    margin: 1px;
+    border: solid 1px #888;
+    border-radius: 5px;
+}
+
+#limpiarT:active{
+    background-color:#F0D44A;
+}
+
+#limpiarC{
+    font-family: orbitron;
+    width: 50px;
+    height: 50px;
+    background-color: #c0bbb5;
+    margin: 1px;
+    border: solid 1px #888;
+    border-radius: 5px;
+}
+
+#limpiarC:active{
+    background-color:#F0D44A;
+}
+
+
+.numeros{
+    font-family: orbitron;
+    width: 50px;
+    height: 50px;
+    background-color: #e2dfd6;
+    margin: 1px;
+    border: solid 1px #888;
+    border-radius: 5px;
+}
+
+.numeros:active{
+    background-color:#F0D44A;
+}
+
+.operadores{
+    font-family: orbitron;
+    width: 50px;
+    height: 50px;
+    background-color: #c0bbb5;
+    margin: 1px;
+    border: solid 1px #888;
+    border-radius: 5px;
+}
+
+.operadores:active{
+    background-color:#F0D44A;
+}
+
+.tratamientos{
+    font-family: orbitron;
+    width: 50px;
+    height: 50px;
+    background-color: #9c9692;
+    margin: 1px;
+    border: solid 1px #888;
+    border-radius: 5px;
+}
+
+.tratamientos:active{
+    background-color:#F0D44A;
+}
+
+.operadoresCi{
+    font-family: orbitron;
+    width: 50px;
+    height: 50px;
+    background-color: #4e4948;
+    margin: 1px;
+    visibility: hidden;
+    border: solid 1px #888;
+    border-radius: 5px;
+}
+
+.operadoresCi:active{
+    background-color:#F0D44A;
+}
+
+#pantalla{
+    top: 17px;
+    left: 56px;
+    position: relative;
+    width: 216px;
+    height: 50px;
+    background-color: #888;
+    margin: 1px;
+    border: solid 1px #ffffff;
+    border-radius: 5px;
+
+   
+    
+}
+
+#salida {
+    font-family: orbitron;
+    position: relative;
+    top: -15px;
+    width: 212px;
+    text-align: right;
+    direction: rtl;
+}
+

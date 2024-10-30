@@ -122,8 +122,8 @@ body {
 
 .cardBody {
     color: white;
-    padding: 10px;
-    flex: 1 1 100%;
+    padding: 320px;
+    flex: 1 1 auto;
 }
 
 .cardFooter {
@@ -147,13 +147,13 @@ body {
 }
 
 .footer {
-    background-color: #333;
+    background-color: #333; 
     opacity: 0.85;
     text-align: center;
     padding: 20px;
-    color: #ffeb3b;
+    color: #ffeb3b; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     left: 0;
