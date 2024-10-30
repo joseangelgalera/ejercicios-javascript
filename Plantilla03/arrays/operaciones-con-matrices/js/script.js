@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const matrizAContainer = document.querySelector('.matrizA');
     const matrizBContainer = document.querySelector('.matrizB');
     const resultadoContainer = document.querySelector('.resultado');
-    const errorMessage = document.querySelector('.error-message');
     const cerrarSesion = document.querySelector('.cerrar-sesion');
     const container = document.querySelector('.container');
     const login = document.querySelector('.login-form');
     const topnav = document.querySelector('.topnav');
     const welcome = document.querySelector('.welcome');
     const header = document.querySelector('.header');
+    const errorMessage = document.querySelector('.error-message');
 
     var db;
     var request = indexedDB.open("loginDB", 1);
