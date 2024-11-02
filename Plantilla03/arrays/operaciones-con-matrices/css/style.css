@@ -123,9 +123,10 @@ body {
 .cardBody {
     padding: 20px;
     margin: 20px;
-    background-color: #f9f9f9;
+    background-color: #333;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: #ffeb3b;
 }
 
 .input-group {
