@@ -129,6 +129,17 @@ body {
     color: #ffeb3b;
 }
 
+button{
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #8b2809e8;
+}
+
 .input-group {
     display: flex;
     align-items: center;

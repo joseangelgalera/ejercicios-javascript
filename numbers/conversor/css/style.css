@@ -126,6 +126,17 @@ body {
     flex: 1 1 100%;
 }
 
+button{
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #8b2809e8;
+}
+
 .cardFooter {
     background-color: #333;
     opacity: 0.85;
@@ -136,7 +147,7 @@ body {
 
 .cardFooter a {
     text-decoration: none;
-    color: white;
+    color: #ffeb3b;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
