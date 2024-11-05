@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     cerrarSesion.addEventListener('click', function() {
+        window.location.href = "/index.html";
         sessionStorage.removeItem("username");
         sessionStorage.removeItem("LoggedIn");
     
@@ -126,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
             welcome.style.display = 'none';
             header.style.borderRadius = ''; 
     
-            window.location.href = "/Plantilla03/index.html";
+            
         };
     
         request.onerror = function(event) {

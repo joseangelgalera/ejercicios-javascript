@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     cerrarSesion.addEventListener('click', function() {
-        window.location.href = "/Plantilla03/index.html";
+        window.location.href = "/index.html";
         sessionStorage.removeItem("username");
         sessionStorage.removeItem("LoggedIn");
 

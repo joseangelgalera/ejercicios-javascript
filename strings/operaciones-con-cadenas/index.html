@@ -17,12 +17,13 @@
     <!-- HEADER -->
     <div class="header">
         <img src="../../img/foto_perfil.jpg" alt="">
-        <h3>Ejemplos – FUNDAMENTOS DE JS (ES6)</h3>
+        <h3>Ejemplos – FUNDAMENTOS DE JS
+            (ES6)</h3>
         <h4>Desarrollo WEB en entorno cliente</h4>
-        <h5>Plantilla03a</h5>
     </div>
     <!-- MENU -->
     <div class="topnav">
+
         <a href="https://www.w3schools.com/js/default.asp">w3schools</a>
         <a href="https://es.javascript.info/js">javascript.info</a>
         <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN</a>
@@ -37,53 +38,47 @@
         <div class="dropdown">
             <a href="#">String</a>
             <div class="dropdown-content">
-                <a href="../../strings/operaciones-con-cadenas/index.html">Operaciones con cadenas</a>
+                <a href="#">Operaciones con cadenas</a>
             </div>
         </div>
         <div class="dropdown">
             <a href="#">Arrays</a>
             <div class="dropdown-content">
-                <a href="#">Operaciones con matrices</a>
+                <a href="../../arrays/operaciones-con-matrices/index.html">Operaciones con matrices</a>
             </div>
         </div>
         <button class="cerrar-sesion">Cerrar Sesión</button>
+        
+        
     </div>
     <br />
     <!-- MAIN-CONTENT -->
     <div class="container">
         <div class="card">
-            <div class="cardTitle">Operaciones con Matrices</div>
+            <div class="cardTitle">Operaciones con cadenas</div>
             <div class="cardBody">
-                <p>Dimension de la matriz</p>
-                <div class="input-group">
-                    <p>Dimensión cuadrada de las matrices:</p>
-                    <input class="entrada" type="text">
-                </div>
-                <div class="error-message" style="color: red; display: none;"></div>
-                <br />
-                <input class="generar" type="button" value="Genera Matrices">
-                <input class="sumar" type="button" value="Sumar Matrices">
-                <input class="restar" type="button" value="Restar Matrices">
-                <input class="multiplicar" type="button" value="Multiplicar Matrices">
-                <br />
-                <br />
-            </div>
-            <div class="cardBody">
-                <div class="matrices-container">
-                    <div class="matriz">
-                        <h3>Matriz A</h3>
-                        <div class="matrizA"></div>
-                    </div>
-                    <div class="matriz">
-                        <h3>Matriz B</h3>
-                        <div class="matrizB"></div>
-                    </div>
-                    <div class="matriz">
-                        <h3>Resultado</h3>
-                        <div class="resultado"></div>
-                    </div>
-            </div>
-            
+              <textarea id="salida" type="text" style="width: 354px; height: 80px;"></textarea>
+              <br />
+              <br />
+              <input id="api" type="button" value="Cargar">
+              <br />
+              <br />
+              <input class="mayuscula" type="button" value="A-Z">
+              <input class="minuscula" type="button" value="a-z">
+              <input class="mayuscula" type="button" value="A_">
+              <input class="mayuscula" type="button" value="_Z">
+              <input class="minuscula" type="button" value="a_">
+              <input class="minuscula" type="button" value="_z">
+              <input class="mayuscula" type="button" value="AEIOU">
+              <input class="minuscula" type="button" value="aeiou">
+              <input class="mayuscula" type="button" value="BCD">
+              <input class="minuscula" type="button" value="bcd">
+              <br />
+              <br />
+              <input id="aleatorio" type="button" value="Aleatorio">
+              <input id="parar" type="button" value="Parar">
+              <input id="rapido" type="button" value="Rapido">
+              <input id="lento" type="button" value="Lento">
             </div>
             <div class="cardFooter"><a href="../../index.html">&gt;&gt; Volver</a></div>
         </div>

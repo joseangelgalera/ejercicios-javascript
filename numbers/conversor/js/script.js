@@ -1,12 +1,16 @@
 "use strict";
 
-let salida = document.getElementById("salida");
-let animacion;
-let tiempo = 1000;
+const x = document.getElementById("x");
+const y = document.getElementById("y");
 
-const mayusculas = document.querySelectorAll(".mayuscula");
-const minusculas = document.querySelectorAll(".minuscula");
-const animaciones = document.querySelectorAll(".animacion");
+const binario = document.getElementById("binario");
+const octal = document.getElementById("octal");
+const hexal = document.getElementById("hexal");
+const decBinario = document.getElementById("decBinario");
+const decOctal = document.getElementById("decOctal");
+const decHexa = document.getElementById("decHexa");
+
+const salida = document.getElementById("salida");
 const cerrarSesion = document.querySelector('.cerrar-sesion');
 const container = document.querySelector('.container');
 const login = document.querySelector('.login-form');
@@ -14,37 +18,29 @@ const topnav = document.querySelector('.topnav');
 const welcome = document.querySelector('.welcome');
 const header = document.querySelector('.header');
 
-document.getElementById("aleatorio").addEventListener("click", function (){
-    aleatorioAnimado(salida.value);
+binario.addEventListener('click', function() {
+    salida.innerHTML = parseInt(x.value).toString(2);
 });
-document.getElementById("parar").addEventListener("click", function (){
-    parar();
+
+octal.addEventListener('click', function() {
+    salida.innerHTML =  parseInt(x.value).toString(8);
 });
-document.getElementById("rapido").addEventListener("click", function (){
-    rapido();
-}); 
-document.getElementById("lento").addEventListener("click", function (){
-    lento();
-}); 
-document.getElementById("api").addEventListener("click", async function (){
-    solicitar();
-}) ;
 
-let resultado = "";
+hexa.addEventListener('click', function() {
+    salida.innerHTML = parseInt(x.value).toString(16);
+});
 
-for (let mayuscula of mayusculas) {
-    mayuscula.addEventListener("click", function () {
-        resultado = operacionMayus(salida.value, mayuscula.value);
-        salida.value = resultado;
-    });
-}
+decBinario.addEventListener('click', function(){
+    salida.innerHTML = parseInt(y.value, 2);
+});
+    
+decOctal.addEventListener('click', function() {
+    salida.innerHTML = parseInt(y.value, 8);
+});
 
-for (let minuscula of minusculas) {
-    minuscula.addEventListener("click", function () {
-        resultado = operacionMinus(salida.value, minuscula.value);
-        salida.value = resultado;
-    });
-}
+decHexa.addEventListener('click', function(){
+    salida.innerHTML = parseInt(y.value, 16);
+});
 
 var db;
 var request = indexedDB.open("loginDB", 1);
@@ -63,7 +59,7 @@ request.onerror = function(event) {
 };
 
 cerrarSesion.addEventListener('click', function() {
-    window.location.href = "/Plantilla03/index.html";
+    window.location.href = "/index.html";
     sessionStorage.removeItem("username");
     sessionStorage.removeItem("LoggedIn");
 
@@ -85,7 +81,6 @@ cerrarSesion.addEventListener('click', function() {
         welcome.style.display = 'none';
         header.style.borderRadius = ''; 
 
-        
     };
 
     request.onerror = function(event) {
