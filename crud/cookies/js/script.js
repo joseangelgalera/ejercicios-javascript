@@ -61,7 +61,7 @@ cookieForm.addEventListener("submit", function(event) {
     event.preventDefault();
     const name = document.getElementById("cookieName").value;
     const value = document.getElementById("cookieValue").value;
-    setCookie(name, JSON.stringify({ value }), 365);
+    setCookie(name, JSON.stringify({ value }), 1/1440); 
     addRowToTable(name, value);
     cookieForm.reset();
 });

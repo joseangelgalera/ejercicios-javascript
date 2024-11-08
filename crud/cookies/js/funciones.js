@@ -8,7 +8,7 @@ async function fetchData(count) {
             const name = item.name.first;
             const value = item.dob.age;
             addRowToTable(name, value);
-            setCookie(name, JSON.stringify({ value }), 1/1440);
+            setCookie(name, JSON.stringify({ value }), 1/1440); 
         });
     } catch (error) {
         console.error("Error fetching data:", error);
