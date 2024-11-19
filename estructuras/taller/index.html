@@ -8,8 +8,7 @@
     <title>Javascript</title>
     <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
-    <script defer src="./js/funciones.js" type="text/javascript"></script>
-    <script defer src="./js/script.js" type="text/javascript"></script>
+    <script defer type="module" src="./main.js"></script>
 </head>
 
 <body>
@@ -33,18 +32,6 @@
             </div>
         </div>
         <div class="dropdown">
-            <a href="#">String</a>
-            <div class="dropdown-content">
-                <a href="../../strings/operaciones-con-cadenas/index.html">Operaciones con cadenas</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#">Arrays</a>
-            <div class="dropdown-content">
-                <a href="../../arrays/operaciones-con-matrices/index.html">Operaciones con matrices</a>
-            </div>
-        </div>
-        <div class="dropdown">
             <a href="#">Crud</a>
             <div class="dropdown-content">
                 <a href="#">Crud con Cookies</a>
@@ -55,9 +42,9 @@
         <div class="dropdown">
             <a href="#">Estructuras</a>
             <div class="dropdown-content">
-                <a href="../../estructuras/colada/index.html">Colada</a>
-                <a href="../../estructuras/taller/index.html">Taller</a>
-                <a href="../../estructuras/tareas/index.html">Tareas</a>
+                <a href="../colada/index.html">Colada</a>
+                <a href="#">Taller</a>
+                <a href="../tareas/index.html">Tareas</a>
             </div>
         </div>
         <button class="cerrar-sesion">Cerrar Sesión</button>
@@ -66,30 +53,12 @@
     <!-- MAIN-CONTENT -->
     <div class="container">
         <div class="card">
-            <div class="cardTitle">CRUD</div>
+            <div class="cardTitle">Gestion de la lista de espera en el Taller</div>
             <div class="cardBody">
-                <h3>CRUD con cookies</h3>
-                <form id="cookieForm">
-                    <label for="cookieName">Nombre:</label>
-                    <input type="text" id="cookieName" name="cookieName" required>
-                    <label for="cookieValue">Valor:</label>
-                    <input type="text" id="cookieValue" name="cookieValue" required>
-                    <button type="submit">Guardar en Cookie</button>
-                </form>
-                <h3>Datos desde API</h3>
-                <button id="fetchOne">+1</button>
-                <button id="fetchFive">+5</button>
-                <table id="dataTable">
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Valor</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+                <button id="añadirCoche">Añadir coche</button>
+                <button id="atenderCoche">Atender coche</button>
+                <div id="mensajeOutput" class="mensaje"></div>
+                <div id="colaOutput"></div>
             </div>
             <div class="cardFooter"><a href="../../index.html">&gt;&gt; Volver</a></div>
         </div>
